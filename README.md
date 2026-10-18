@@ -1,3 +1,24 @@
+# COVID-19 SQL exploration
+
+A guided portfolio exercise exploring historical COVID-19 deaths and vaccination data with MySQL.
+
+- [Read the case study](https://eugenetur.pages.dev/projects/covid-pipeline/)
+- [Inspect the original SQL](./SQL%20Data%20Analysis%20Covid19Data.sql)
+- [View the related Tableau dashboard](https://public.tableau.com/views/Covid19Project_16649621953250/Dashboard1)
+
+## What to inspect
+
+The script demonstrates joins on location/date, aggregate queries, a common table expression, rolling sums and a view for further visualisation. It is an annotated working document; the original source is retained.
+
+The `SUM(new_vaccinations)` calculation counts vaccination doses. The original variable name `RollingPeopleVaccinated` must not be interpreted as a count of unique people. Execution-speed and row-volume benchmarks are not established by this repository.
+
+## Opening the work
+
+Use a MySQL environment supporting common table expressions and window functions. The script references `portfolioproject.covid19deaths` and `portfolioproject.covid22vac`. Raw source datasets and a reproducible import package are not included here; inspect the statements and adapt the database/table names before running them against your own copy of the data.
+
+<details>
+<summary>Original project notes</summary>
+
 In this project, **I focused on optimizing MY SQL workflow and analyzing and visualizing COVID-19 data**. I used a variety of techniques to analyze the data, such as filtering and using aggregate functions. I also joined tables and created views for storing data for later visualization. I organized the data and did simple calculations with it. I also worked with temporary tables and used comments in my code. 
 I also used a virtual table and organized my SQL code in a repository like GitHub.
 
@@ -30,3 +51,6 @@ I also used a virtual table and organized my SQL code in a repository like GitHu
 - It is good practice to include a "DROP TABLE IF EXISTS" statement at the beginning of a SQL query to prevent errors when running the query multiple times
 - A view in SQL is a virtual table that can be created from the result of a SELECT statement, and can be used for later visualization
 - It is a good idea to store and organize SQL code in a repository like GitHub for reference and to showcase portfolio projects to potential employers.
+
+
+</details>
